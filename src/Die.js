@@ -3,9 +3,9 @@ import './Die.css'
 
 class Die extends Component {
     render() {
-        const { face } = this.props
+        const { face, isRolling } = this.props
         return (
-            <i className={`Die fas fa-dice-${face}`}></i>
+            <i className={`Die fas fa-dice-${face} ${isRolling && ' rolling'}`} />
         )
     }
 }

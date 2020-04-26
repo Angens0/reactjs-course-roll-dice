@@ -34,14 +34,15 @@ class RollDice extends Component {
 
     render() {
         const { isRolling, die1, die2 } = this.state
-
         return (
             <div className="RollDice">
                 <div className="RollDice-container">
                     <Die face={die1} isRolling={isRolling} />
                     <Die face={die2} isRolling={isRolling} />
                 </div>
-                <button onClick={this.startRolling} disabled={isRolling}>Roll</button>
+                <button onClick={this.startRolling} disabled={isRolling}>
+                    {isRolling ? 'Rolling...' : 'Roll Dice!'}
+                </button>
             </div>
         )
     }
